@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bal'ad — Dog-sitting & Balades en vélo cargo à Grenoble</title>
-  
+  <title>Bal'ad — Dog-sitting &amp; Balades en vélo cargo à Grenoble</title>
+
   <meta name="description" content="Bal'ad : service de dog-sitting et balades canines en vélo cargo à Grenoble. Dog-sitter certifiée ACACED, garde à domicile et sorties nature adaptées.">
   <meta name="keywords" content="dog sitting Grenoble, promeneur chien vélo cargo, garde animaux Grenoble, ACACED">
 
@@ -12,13 +12,13 @@
   <meta property="og:title" content="Bal'ad — Dog-sitting à vélo cargo à Grenoble">
   <meta property="og:description" content="Des balades et gardes pensées pour le bien-être de votre chien dans l'agglomération grenobloise.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/velo_cargo.jpeg">
+  <meta property="og:image" content="https://latifie.github.io/balad-website/assets/images/velo-cargo.webp">
 
   <!-- Polices Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- SEO Local (Schema.org) -->
@@ -27,7 +27,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Bal'ad",
-    "image": "assets/images/velo_cargo.jpeg",
+    "image": "https://latifie.github.io/balad-website/assets/images/velo-cargo.webp",
     "description": "Dog-sitting et promenades en vélo cargo à Grenoble.",
     "address": {
       "@type": "PostalAddress",
@@ -52,13 +52,13 @@
       <a href="#top" class="logo">Bal<span class="dot">'</span>ad</a>
       <nav id="navMenu">
         <ul class="nav-links">
-          <li><a href="#services">Services & Tarifs</a></li>
+          <li><a href="#services">Services &amp; Tarifs</a></li>
           <li><a href="#apropos">À propos</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact" class="btn btn-primary nav-btn">Réserver une balade</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="hero-illustration">
-          <img src="assets/images/velo_cargo.jpeg" alt="Illustration d'un dog-sitter sur vélo cargo avec son chien" width="600" height="600" loading="eager">
+          <img src="assets/images/velo-cargo.webp" alt="Illustration d'un dog-sitter sur vélo cargo avec son chien" width="900" height="900" loading="eager">
         </div>
       </div>
     </section>
@@ -165,7 +165,7 @@
     <section id="apropos" class="section-padded bg-soft">
       <div class="wrap about-grid">
         <div class="about-image">
-          <img src="assets/images/personnage.jpeg" alt="Portrait de la dog-sitter Bal'ad" width="450" height="450" loading="lazy">
+          <img src="assets/images/portrait-dogsitter.webp" alt="Portrait de la dog-sitter Bal'ad" width="900" height="900" loading="lazy">
         </div>
         <div class="about-content">
           <span class="eyebrow">Mon approche</span>
@@ -212,7 +212,7 @@
         <div class="contact-cards">
           <div class="contact-card">
             <span class="contact-label">Téléphone</span>
-            <a href="tel:06xxxxxxxx">06 xx xx xx xx</a>
+            <a href="tel:06xxxxxxxx">06&nbsp;xx&nbsp;xx&nbsp;xx&nbsp;xx</a>
           </div>
           <div class="contact-card">
             <span class="contact-label">Instagram</span>
@@ -222,6 +222,69 @@
             <span class="contact-label">Mail</span>
             <a href="mailto:balad.contact@gmail.com">balad.contact@gmail.com</a>
           </div>
+        </div>
+
+        <div class="reservation-form-wrap">
+          <h3>Faire une demande de réservation</h3>
+          <p class="reservation-intro">Envoyez votre demande directement par email, ou téléchargez-la en PDF pour me la transmettre autrement.</p>
+
+          <form id="reservationForm" class="reservation-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="clientName">Nom et prénom *</label>
+                <input type="text" id="clientName" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="clientEmail">Email *</label>
+                <input type="email" id="clientEmail" name="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="clientPhone">Téléphone</label>
+                <input type="tel" id="clientPhone" name="telephone" autocomplete="tel">
+              </div>
+              <div class="form-field">
+                <label for="dogName">Nom du chien *</label>
+                <input type="text" id="dogName" name="chien" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="service">Prestation souhaitée *</label>
+                <select id="service" name="prestation" required>
+                  <option value="">Choisir...</option>
+                  <option>Balade collective</option>
+                  <option>Balade solo</option>
+                  <option>Garderie demi-journée (4h)</option>
+                  <option>Garderie journée complète (9h)</option>
+                  <option>Pension une nuit</option>
+                  <option>Pension journée + nuit</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="dates">Dates souhaitées *</label>
+                <input type="text" id="dates" name="dates" required placeholder="ex : 12 au 15 septembre">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message complémentaire</label>
+              <textarea id="message" name="message" rows="4" placeholder="Infos utiles : race, taille, comportement, allergies..."></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Bal'ad">
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btnSendEmail">Envoyer par email</button>
+              <button type="button" class="btn btn-ghost" id="btnDownloadPdf">Télécharger en PDF</button>
+            </div>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -235,11 +298,11 @@
         </div>
 
         <div class="photo-grid">
-          <img src="assets/images/Pasted Image" alt="Photo de chien en balade" loading="lazy">
-          <img src="assets/images/Pasted Image 2" alt="Photo de chien en extérieur" loading="lazy">
-          <img src="assets/images/Pasted Image 3" alt="Photo de chien avec vélo cargo" loading="lazy">
-          <img src="assets/images/Pasted Image 4" alt="Photo de chien en promenade" loading="lazy">
-          <img src="assets/images/Pasted Image 5" alt="Photo de chien en promenade" loading="lazy">
+          <img src="assets/images/photo-balade-1.webp" alt="Chien en pleine balade, harnais attaché en sécurité" width="750" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-2.webp" alt="Chien se reposant en extérieur dans un espace vert" width="640" height="428" loading="lazy">
+          <img src="assets/images/photo-balade-3.webp" alt="Chien installé dans la caisse sécurisée du vélo cargo" width="750" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-4.webp" alt="Chien explorant un sentier lors d'une sortie nature" width="760" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-5.webp" alt="Chien en balade dans les rues de Grenoble" width="724" height="1000" loading="lazy">
         </div>
       </div>
     </section>
@@ -252,6 +315,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
 </body>
 </html>

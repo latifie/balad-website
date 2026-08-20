@@ -374,6 +374,24 @@ header {
   .pricing-row {
     padding: 18px 16px;
   }
+
+  .pricing-row > div + div {
+    margin-top: 10px;
+  }
+
+  .price-block::before,
+  .addon::before,
+  .hours::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--pine-light);
+    margin-bottom: 4px;
+    opacity: 0.7;
+  }
 }
 
 /* À propos */

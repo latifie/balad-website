@@ -223,6 +223,69 @@
             <a href="mailto:balad.contact@gmail.com">balad.contact@gmail.com</a>
           </div>
         </div>
+
+        <div class="reservation-form-wrap">
+          <h3>Faire une demande de réservation</h3>
+          <p class="reservation-intro">Envoyez votre demande directement par email, ou téléchargez-la en PDF pour me la transmettre autrement.</p>
+
+          <form id="reservationForm" class="reservation-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="clientName">Nom et prénom *</label>
+                <input type="text" id="clientName" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="clientEmail">Email *</label>
+                <input type="email" id="clientEmail" name="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="clientPhone">Téléphone</label>
+                <input type="tel" id="clientPhone" name="telephone" autocomplete="tel">
+              </div>
+              <div class="form-field">
+                <label for="dogName">Nom du chien *</label>
+                <input type="text" id="dogName" name="chien" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="service">Prestation souhaitée *</label>
+                <select id="service" name="prestation" required>
+                  <option value="">Choisir...</option>
+                  <option>Balade collective</option>
+                  <option>Balade solo</option>
+                  <option>Garderie demi-journée (4h)</option>
+                  <option>Garderie journée complète (9h)</option>
+                  <option>Pension une nuit</option>
+                  <option>Pension journée + nuit</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="dates">Dates souhaitées *</label>
+                <input type="text" id="dates" name="dates" required placeholder="ex : 12 au 15 septembre">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message complémentaire</label>
+              <textarea id="message" name="message" rows="4" placeholder="Infos utiles : race, taille, comportement, allergies..."></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Bal'ad">
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btnSendEmail">Envoyer par email</button>
+              <button type="button" class="btn btn-ghost" id="btnDownloadPdf">Télécharger en PDF</button>
+            </div>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -252,6 +315,7 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

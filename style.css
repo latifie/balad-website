@@ -452,6 +452,50 @@ header {
   font-weight: 500;
 }
 
+.bg-pine .btn-ghost { color: var(--cream); border-color: rgba(255,255,255,0.4); }
+.bg-pine .btn-ghost:hover { background: rgba(255,255,255,0.12); color: var(--cream); }
+
+/* Formulaire de réservation */
+.reservation-form-wrap {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+.reservation-form-wrap h3 { color: var(--cream); font-size: 22px; }
+.reservation-intro { color: rgba(255,255,255,0.75); font-size: 15px; margin-top: 8px; margin-bottom: 24px; }
+
+.reservation-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); }
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font: inherit;
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: var(--cream);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(255,255,255,0.45); }
+.form-field select option { color: var(--ink); }
+.form-field textarea { resize: vertical; min-height: 90px; }
+
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.form-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+.form-status { font-size: 14px; min-height: 20px; }
+.form-status.success { color: #8FD6A8; }
+.form-status.error { color: #F3A6A6; }
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
 /* Photos */
 .photo-grid {
   display: grid;

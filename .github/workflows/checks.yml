@@ -23,8 +23,11 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2
         with:
+          # latifie.github.io: depends on deploy state, not on this branch's content
+          # instagram.com: blocks automated crawlers with a 429 after a login-wall redirect chain
           args: >-
             --verbose --no-progress
             --exclude '^https://latifie\.github\.io'
+            --exclude 'instagram\.com'
             index.html
           fail: true

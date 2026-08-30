@@ -21,6 +21,9 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Leaflet (carte des zones desservies) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
+
   <!-- SEO Local (Schema.org) -->
   <script type="application/ld+json">
   {
@@ -54,6 +57,7 @@
         <ul class="nav-links">
           <li><a href="#services">Services &amp; Tarifs</a></li>
           <li><a href="#apropos">À propos</a></li>
+          <li><a href="#zone">Zone couverte</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact" class="btn btn-primary nav-btn">Réserver une balade</a></li>
         </ul>
@@ -93,7 +97,8 @@
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Prestations</span>
-          <h2>Bal'ad — Promenade de chiens</h2>
+          <h2>Des balades et des gardes, à la carte</h2>
+          <p>Chaque prestation démarre par une rencontre à domicile ou en extérieur, pour que votre chien parte de la bonne patte.</p>
         </div>
 
         <div class="pricing-table">
@@ -106,28 +111,28 @@
 
           <div class="pricing-row pricing-grid">
             <div class="service-name">Balade collective</div>
-            <div class="price-block" data-label="Tarifs">18€<small>(5 balades : 85€, 10 balades : 150€)</small></div>
+            <div class="price-block" data-label="Tarifs">18€</div>
             <div class="addon" data-label="Si 2e chien">25€<small>(+7€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 12h<br>14h - 18h</div>
+            <div class="hours" data-label="Horaires">9h - 18h</div>
           </div>
 
           <div class="pricing-row pricing-grid">
             <div class="service-name">Balade solo</div>
-            <div class="price-block" data-label="Tarifs">25€<small>(5 balades : 115€, 10 balades : 230€)</small></div>
+            <div class="price-block" data-label="Tarifs">25€</div>
             <div class="addon" data-label="Si 2e chien">35€<small>(+10€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 12h<br>14h - 18h</div>
+            <div class="hours" data-label="Horaires">9h - 18h</div>
           </div>
 
           <div class="pricing-row pricing-grid">
             <div class="service-name">Garderie : Une demi-journée, 4h</div>
-            <div class="price-block" data-label="Tarifs">25€<small>(minimum 1 balade de 1h)</small></div>
+            <div class="price-block" data-label="Tarifs">25€</div>
             <div class="addon" data-label="Si 2e chien">35€<small>(+10€)</small></div>
             <div class="hours" data-label="Horaires">9h - 13h<br>14h - 18h</div>
           </div>
 
           <div class="pricing-row pricing-grid">
             <div class="service-name">Garderie : Une journée complète, 9h</div>
-            <div class="price-block" data-label="Tarifs">35€<small>(minimum 2 balades de 1h)</small></div>
+            <div class="price-block" data-label="Tarifs">35€<small>(minimum 2 balades)</small></div>
             <div class="addon" data-label="Si 2e chien">49€<small>(+14€)</small></div>
             <div class="hours" data-label="Horaires">9h - 18h</div>
           </div>
@@ -143,20 +148,35 @@
             <div class="service-name">Pensions : Une journée + 1 nuit</div>
             <div class="price-block" data-label="Tarifs">50€<small>(+ 40€ par nuit supplémentaire)</small></div>
             <div class="addon" data-label="Si 2e chien">70€<small>(+30€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 8h<br>+60€ par nuit supp. (+10€)</div>
+            <div class="hours" data-label="Horaires">9h - 8h</div>
           </div>
         </div>
 
-        <div class="pricing-note">
-          <p><strong>Note balades :</strong> Les balades font minimum 1h.</p>
-          <p><strong>À partir de + 5s/m constitutives :</strong> Tarifs sur devis.</p>
-        </div>
-
         <div class="extra-info">
+          <p class="extra-info-title">À savoir</p>
           <ul>
-            <li><strong>Disponibilités :</strong> Du lundi au vendredi, 8h-12h, 14h-18h</li>
-            <li><strong>Supplément :</strong> + 5€ au prix affiché le W.-E. et jours fériés <em>(également en délais très courts)</em>.</li>
+            <li>Les balades font minimum 1h.</li>
+            <li>Tarifs sur devis à partir de 2 jours consécutifs.</li>
+            <li>Disponibilités du lundi au vendredi, 8h–12h et 14h–18h.</li>
+            <li>Supplément de +10€ le week-end, les jours fériés.</li>
+            <li>Les demandes qui ne figurent pas sur site et/ou en dehors des horaires standard sont prises en compte sur devis.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carte de fidélité -->
+    <section id="fidelite" class="section-padded bg-soft">
+      <div class="wrap">
+        <div class="loyalty-card">
+          <span class="eyebrow">Carte de fidélité</span>
+          <h2>10 prestations, la 11<sup>e</sup> offerte</h2>
+          <p>Valable sur une même catégorie 10 balades ou 10 gardes.</p>
+          <div class="loyalty-dots" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span class="loyalty-dot-free">11<sup>e</sup></span>
+          </div>
         </div>
       </div>
     </section>
@@ -172,6 +192,68 @@
           <h2>La passion du bien-être canin</h2>
           <p>Titulaire de l'ACACED et propriétaire de deux chiens, j'accorde une importance capitale aux signaux d'apaisement, au respect des limites de chaque animal et à la sécurité.</p>
           <p>Le vélo cargo permet d'éviter le stress des trajets en voiture fermée et d'offrir des balades enrichissantes dans les plus beaux espaces verts de Grenoble.</p>
+
+          <ul class="feature-list">
+            <li>
+              <h3>Transparence totale</h3>
+              <p>Photos et vidéos envoyées pendant la garde, pour que vous suiviez chaque instant.</p>
+            </li>
+            <li>
+              <h3>Première rencontre obligatoire</h3>
+              <p>Un temps d'échange et une balade ensemble avant toute prise en charge.</p>
+            </li>
+            <li>
+              <h3>Tous les profils bienvenus</h3>
+              <p>Chiots, seniors, chiens à besoins médicaux ou réactifs sur devis selon leurs besoins.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone couverte -->
+    <section id="zone" class="section-padded">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Zone couverte</span>
+          <h2>Grenoble et ses environs</h2>
+          <p>Prise en charge directement à votre domicile, à vélo cargo. En dehors de ce secteur, un devis est possible. Survolez ou cliquez sur un secteur pour voir le détail.</p>
+        </div>
+
+        <div class="zone-grid">
+          <ul class="zone-list">
+            <li>
+              <button type="button" class="zone-item" data-zone="centre">
+                <span class="zone-dot zone-dot-centre" aria-hidden="true"></span>
+                <span class="zone-name">Grenoble centre</span>
+                <span class="zone-tag">Domicile</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="zone-item" data-zone="smh">
+                <span class="zone-dot zone-dot-smh" aria-hidden="true"></span>
+                <span class="zone-name">Saint-Martin-d'Hères</span>
+                <span class="zone-tag">Domicile</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="zone-item" data-zone="echirolles">
+                <span class="zone-dot zone-dot-echirolles" aria-hidden="true"></span>
+                <span class="zone-name">Échirolles</span>
+                <span class="zone-tag">Domicile</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="zone-item" data-zone="autres">
+                <span class="zone-dot zone-dot-autres" aria-hidden="true"></span>
+                <span class="zone-name">Autres secteurs</span>
+                <span class="zone-tag zone-tag-devis">Sur devis</span>
+              </button>
+            </li>
+          </ul>
+          <div class="zone-map">
+            <div id="zoneMap" class="zone-map-canvas" role="img" aria-label="Carte des secteurs desservis par Bal'ad autour de Grenoble"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -194,7 +276,23 @@
           </details>
           <details class="faq-item">
             <summary>Faites-vous une pré-visite avant la première garde ?</summary>
-            <p>Oui, une première rencontre gratuite est obligatoire pour faire connaissance avec vous et votre chien, valider ses ententes et signer le contrat.</p>
+            <p>Oui, une première rencontre est obligatoire pour faire connaissance avec vous et votre chien, valider ses ententes et signer le contrat.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Puis-je annuler ou modifier ma réservation ?</summary>
+            <p>Oui, gratuitement jusqu'à 48h avant la prestation. Passé ce délai, la prestation reste due.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quels moyens de paiement acceptez-vous ?</summary>
+            <p>Le règlement se fait en espèces ou par virement.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Que se passe-t-il en cas de problème de santé pendant une garde ou une balade ?</summary>
+            <p>Votre vétérinaire habituel est contacté en priorité et vous êtes prévenu(e) immédiatement.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Y a-t-il des conditions pour accepter mon chien ?</summary>
+            <p>Pas de règle stricte a priori : âge, comportement, besoins médicaux... chaque situation est évaluée au cas par cas lors de la rencontre obligatoire, afin de proposer un accompagnement adapté.</p>
           </details>
         </div>
       </div>
@@ -265,8 +363,12 @@
                 </select>
               </div>
               <div class="form-field">
-                <label for="dates">Dates souhaitées *</label>
-                <input type="text" id="dates" name="dates" required placeholder="ex : 12 au 15 septembre">
+                <label for="dateStart">Dates souhaitées *</label>
+                <div class="date-range">
+                  <input type="date" id="dateStart" name="dateDebut" required aria-label="Date de début">
+                  <span class="date-range-sep">au</span>
+                  <input type="date" id="dateEnd" name="dateFin" required aria-label="Date de fin">
+                </div>
               </div>
             </div>
 
@@ -318,6 +420,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
     integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin></script>
   <script src="script.js"></script>
 </body>
 </html>

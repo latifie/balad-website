@@ -18,7 +18,7 @@ Bal'ad offers enriching walking experiences for dogs using an eco-friendly cargo
 
 ## Contact
 
-📞 **Phone:** 06 xx xx xx xx  
+📞 **Phone:** 07 80 95 14 14  
 📧 **Email:** balad.contact@gmail.com  
 📱 **Instagram:** [@bal_ad_grenoble](https://instagram.com/bal_ad_grenoble)
 
@@ -48,7 +48,7 @@ Visitors can fill out a booking request (contact info, dog's name, service, date
 - **Styling:** Custom CSS with responsive grid layout
 - **Images:** WebP, optimized and resized locally
 - **Forms/PDF:** FormSubmit.co (email relay) + jsPDF (client-side PDF export, loaded with a Subresource Integrity hash)
-- **Deployment:** Static site hosted on GitHub Pages — https://latifie.github.io/balad-website/
+- **Deployment:** Static site hosted on GitHub Pages, served under the custom domain `balad-grenoble.fr` (registered with OVH) via the repo's `CNAME` file. DNS at OVH: 4 `A` records at the apex (`@`) pointing to GitHub Pages' IPs (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) plus a `CNAME` record for `www` pointing to `latifie.github.io`; "Enforce HTTPS" is enabled in the repo's Pages settings once DNS propagates.
 - **SEO:** `robots.txt` and `sitemap.xml` included, absolute Open Graph/Schema.org image URLs
 - **CI:** GitHub Actions workflow (`.github/workflows/checks.yml`) validates HTML and checks for broken links on every push/PR
 

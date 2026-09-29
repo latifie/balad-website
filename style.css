@@ -141,7 +141,7 @@ header {
 }
 
 .brand-logo-img {
-  height: 52px;
+  height: 96px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -685,7 +685,7 @@ img.collab-logo-mana {
 }
 
 .collab-title-tag {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -707,13 +707,13 @@ img.collab-logo-mana {
 }
 
 .collab-logo-left {
-  height: 80px;
+  height: 68px;
   width: auto;
   object-fit: contain;
 }
 
 .collab-logo-right {
-  height: 80px;
+  height: 178px;
   width: auto;
   object-fit: contain;
 }
@@ -776,7 +776,7 @@ img.collab-logo-mana {
   border-radius: 50px;
   padding: 10px 28px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   text-decoration: none;
   transition: background 0.2s ease;

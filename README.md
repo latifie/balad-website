@@ -19,7 +19,7 @@ Bal'ad offers enriching walking experiences for dogs using an eco-friendly cargo
 ## Contact
 
 📞 **Phone:** 07 80 95 14 14  
-📧 **Email:** balad.contact@gmail.com  
+📧 **Email:** contact@balad-grenoble.fr  
 📱 **Instagram:** [@bal_ad_grenoble](https://instagram.com/bal_ad_grenoble)
 
 **First Consultation:** Free meeting to discuss your dog's needs and sign the service agreement.
@@ -39,7 +39,7 @@ Bal'ad offers enriching walking experiences for dogs using an eco-friendly cargo
 
 Visitors can fill out a booking request (contact info, dog's name, service, dates, message) from the Contact section and either:
 
-- **Send it by email** — submitted via [FormSubmit.co](https://formsubmit.co), a backend-free form relay service, to `balad.contact@gmail.com`. The destination address is set in a single constant (`RESERVATION_EMAIL`) at the top of `script.js`, ready to update once a professional email is set up. Note: FormSubmit requires a one-time confirmation click on the first real submission before it starts delivering messages.
+- **Send it by email** — submitted via [FormSubmit.co](https://formsubmit.co), a backend-free form relay service, to `contact@balad-grenoble.fr`. The destination address is set in a single constant (`RESERVATION_EMAIL`) at the top of `script.js`, ready to update once a professional email is set up. Note: FormSubmit requires a one-time confirmation click on the first real submission before it starts delivering messages.
 - **Download it as a PDF** — generated client-side with [jsPDF](https://github.com/parallax/jsPDF), no server involved.
 
 ## Technical Details

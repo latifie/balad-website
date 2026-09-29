@@ -11,7 +11,7 @@ if (toggleBtn && navMenu) {
 
 // Formulaire de réservation : envoi par email (FormSubmit) et export PDF (jsPDF)
 // TODO: remplacer par l'email professionnel une fois le nom de domaine choisi
-const RESERVATION_EMAIL = 'balad.contact@gmail.com';
+const RESERVATION_EMAIL = 'contact@balad-grenoble.fr';
 
 // Empêche de choisir une date de fin antérieure à la date de début
 const dateStartInput = document.getElementById('dateStart');
@@ -129,86 +129,52 @@ if (btnDownloadPdf) {
   });
 }
 
-// Carte des zones desservies (Leaflet + OpenStreetMap)
+// Carte de la zone couverte et point de rendez-vous (Leaflet + OpenStreetMap)
 const zoneMapEl = document.getElementById('zoneMap');
 
 if (zoneMapEl && typeof L !== 'undefined') {
-  const zones = {
-    centre: {
-      center: [45.1885, 5.7245],
-      radius: 2200,
-      color: '#D63E77',
-      title: 'Grenoble centre — Domicile',
-      detail: 'Hyper-centre, Île Verte, Championnet, Berriat, Caserne de Bonne.',
-    },
-    smh: {
-      center: [45.1707, 5.7638],
-      radius: 2200,
-      color: '#2E4A3B',
-      title: "Saint-Martin-d'Hères — Domicile",
-      detail: 'Ensemble de la commune.',
-    },
-    echirolles: {
-      center: [45.1650, 5.7133],
-      radius: 2200,
-      color: '#C98A3E',
-      title: 'Échirolles — Domicile',
-      detail: 'Ensemble de la commune.',
-    },
-    autres: {
-      center: [45.1885, 5.7245],
-      radius: 8000,
-      color: '#1F241E',
-      dashed: true,
-      title: 'Autres secteurs — Sur devis',
-      detail: 'Communes limitrophes de l\'agglomération grenobloise, selon la distance.',
-    },
-  };
+  // Coordonnées de Mana Café : 21 Rue Saint-Jacques, 38000 Grenoble
+  const MANA_CAFE_COORDS = [45.19055, 5.7271];
+  const GRENOBLE_CENTER = [45.1885, 5.7245];
 
-  const map = L.map(zoneMapEl, { scrollWheelZoom: false }).setView([45.1885, 5.7245], 12);
+  const map = L.map(zoneMapEl, { scrollWheelZoom: false }).setView(MANA_CAFE_COORDS, 13);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 18,
   }).addTo(map);
 
-  const circles = {};
-  let domicileBounds = null;
+  // Zone d'intervention unique (Grenoble et environs proches : rayon ~3.5 km)
+  const coverageCircle = L.circle(GRENOBLE_CENTER, {
+    radius: 3500,
+    color: '#2E4A3B',
+    weight: 2,
+    fillColor: '#2E4A3B',
+    fillOpacity: 0.15,
+  })
+    .bindPopup("<strong>🚴 Zone d'intervention Bal'ad</strong><br>Grenoble et ses environs proches")
+    .addTo(map);
 
-  Object.entries(zones).forEach(([key, zone]) => {
-    const circle = L.circle(zone.center, {
-      radius: zone.radius,
-      color: zone.color,
-      weight: 2,
-      dashArray: zone.dashed ? '6 6' : null,
-      fillColor: zone.color,
-      fillOpacity: zone.dashed ? 0.05 : 0.18,
-    })
-      .bindPopup(`<strong>${zone.title}</strong><br>${zone.detail}`)
-      .addTo(map);
-    circles[key] = circle;
-    if (!zone.dashed) {
-      domicileBounds = domicileBounds ? domicileBounds.extend(circle.getBounds()) : circle.getBounds();
-    }
-  });
+  // Marqueur repère pour Mana Café
+  const manaMarker = L.marker(MANA_CAFE_COORDS)
+    .bindPopup('<strong>📍 Mana Café — Point de RDV</strong><br>21 Rue Saint-Jacques, 38000 Grenoble<br><em>Lieu de dépôt et de récupération des chiens.</em>')
+    .addTo(map);
 
-  if (domicileBounds) map.fitBounds(domicileBounds, { padding: [24, 24] });
-
-  // Le grand cercle "Autres secteurs" doit rester derrière les autres, sinon
-  // il capte tous les clics de la carte puisqu'il les recouvre entièrement.
-  if (circles.autres) circles.autres.bringToBack();
+  // Ouvrir automatiquement le popup du Mana Café
+  manaMarker.openPopup();
 
   document.querySelectorAll('.zone-item').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const zone = zones[btn.dataset.zone];
-      const circle = circles[btn.dataset.zone];
-      if (!zone || !circle) return;
-
       document.querySelectorAll('.zone-item').forEach((b) => b.classList.remove('is-active'));
       btn.classList.add('is-active');
 
-      map.flyTo(zone.center, zone.dashed ? 11 : 13, { duration: 0.6 });
-      circle.openPopup();
+      if (btn.dataset.zone === 'mana') {
+        map.flyTo(MANA_CAFE_COORDS, 15, { duration: 0.6 });
+        manaMarker.openPopup();
+      } else {
+        map.flyTo(GRENOBLE_CENTER, 13, { duration: 0.6 });
+        coverageCircle.openPopup();
+      }
     });
   });
 }

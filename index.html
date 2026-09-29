@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bal'ad — Dog-sitting &amp; Balades en vélo cargo à Grenoble</title>
 
-  <meta name="description" content="Bal'ad : service de dog-sitting et balades canines en vélo cargo à Grenoble. Dog-sitter certifiée ACACED, garde à domicile et sorties nature adaptées.">
+  <meta name="description"
+    content="Bal'ad : service de dog-sitting et balades canines en vélo cargo à Grenoble. Dog-sitter certifiée ACACED, garde à domicile et sorties nature adaptées.">
 
   <link rel="canonical" href="https://balad-grenoble.fr/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <!-- Open Graph / Réseaux Sociaux -->
   <meta property="og:title" content="Bal'ad — Dog-sitting à vélo cargo à Grenoble">
-  <meta property="og:description" content="Des balades et gardes pensées pour le bien-être de votre chien dans l'agglomération grenobloise.">
+  <meta property="og:description"
+    content="Des balades et gardes pensées pour le bien-être de votre chien dans l'agglomération grenobloise.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://balad-grenoble.fr/">
   <meta property="og:site_name" content="Bal'ad">
@@ -22,12 +25,15 @@
   <!-- Polices Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
   <!-- Leaflet (carte des zones desservies) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
 
   <!-- SEO Local (Schema.org) -->
   <script type="application/ld+json">
@@ -38,7 +44,7 @@
     "url": "https://balad-grenoble.fr/",
     "image": "https://balad-grenoble.fr/assets/images/velo-cargo.webp",
     "description": "Dog-sitting et promenades en vélo cargo à Grenoble.",
-    "email": "balad.contact@gmail.com",
+    "email": "contact@balad-grenoble.fr",
     "telephone": "+33780951414",
     "address": {
       "@type": "PostalAddress",
@@ -78,12 +84,16 @@
   }
   </script>
 </head>
+
 <body>
 
   <!-- Navigation -->
   <header>
     <div class="wrap nav-wrap">
-      <a href="#top" class="logo">Bal<span class="dot">'</span>ad</a>
+      <a href="#top" class="logo brand-logo">
+        <img src="assets/images/logo-balad.webp" alt="Logo Bal'ad" class="brand-logo-img">
+        <span>Bal<span class="dot">'</span>ad</span>
+      </a>
       <nav id="navMenu">
         <ul class="nav-links">
           <li><a href="#services">Services &amp; Tarifs</a></li>
@@ -93,7 +103,8 @@
           <li><a href="#contact" class="btn btn-primary nav-btn">Réserver une balade</a></li>
         </ul>
       </nav>
-      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -106,7 +117,8 @@
         <div class="hero-content">
           <span class="eyebrow">Dog-sitting à vélo cargo · Grenoble</span>
           <h1>Ici, votre chien passe <em>toujours</em> en premier.</h1>
-          <p class="lede">Promenades stimulantes, visites bienveillantes et garde sur-mesure au rythme de votre compagnon.</p>
+          <p class="lede">Promenades stimulantes, visites bienveillantes et garde sur-mesure au rythme de votre
+            compagnon.</p>
           <div class="hero-ctas">
             <a href="#contact" class="btn btn-primary">Réserver un créneau</a>
             <a href="#services" class="btn btn-ghost">Découvrir les tarifs</a>
@@ -118,7 +130,8 @@
           </div>
         </div>
         <div class="hero-illustration">
-          <img src="assets/images/velo-cargo.webp" alt="Illustration d'un dog-sitter sur vélo cargo avec son chien" width="900" height="900" loading="eager">
+          <img src="assets/images/velo-cargo.webp" alt="Illustration d'un dog-sitter sur vélo cargo avec son chien"
+            width="900" height="900" loading="eager">
         </div>
       </div>
     </section>
@@ -129,68 +142,112 @@
         <div class="section-head">
           <span class="eyebrow">Prestations</span>
           <h2>Des balades et des gardes, à la carte</h2>
-          <p>Chaque prestation démarre par une rencontre à domicile ou en extérieur, pour que votre chien parte de la bonne patte.</p>
+          <p>Chaque prestation démarre par une rencontre à domicile ou en extérieur, pour que votre chien parte de la
+            bonne patte.</p>
         </div>
 
-        <div class="pricing-table">
-          <div class="pricing-header pricing-grid">
-            <div>Prestation</div>
-            <div>Tarifs</div>
-            <div>Si 2e chien</div>
-            <div>Horaires</div>
+        <div class="pricing-categories two-columns">
+          <!-- Categorie 1: Garderie Canine x Mana (Collaboration) -->
+          <div class="pricing-category-card collab-card featured mockup-style">
+            <div class="collab-header-top">
+              <span class="collab-title-tag">COLLABORATION SPÉCIALE</span>
+            </div>
+
+            <div class="collab-hero-showcase">
+              <div class="collab-dual-logos">
+                <img src="assets/images/logo-mana.webp" alt="Logo Mana Concept Store Café" class="collab-logo-left">
+                <span class="collab-cross-symbol">×</span>
+                <img src="assets/images/logo-balad.webp" alt="Logo Bal'ad" class="collab-logo-right">
+              </div>
+              <div class="collab-presente">
+                <span>PRÉSENTÉ PAR :</span>
+                <strong>MANA CAFÉ &amp; BAL'AD</strong>
+              </div>
+            </div>
+
+            <!-- Capsule d'offres / tarifs -->
+            <div class="collab-capsule-box">
+              <div class="collab-capsule-header">
+                <h3>Garderie Canine</h3>
+                <span class="collab-bonus-tag">Puppuccino (chien) + Café (humain) inclus</span>
+              </div>
+
+              <div class="price-items-list">
+                <div class="price-item">
+                  <div class="price-item-main">
+                    <div class="price-item-info">
+                      <h4>Demi-journée</h4>
+                      <span class="price-time">Matin ou Après-midi (4h)</span>
+                    </div>
+                    <div class="price-tag-wrap">
+                      <span class="price-amount collab-price">35€</span>
+                    </div>
+                  </div>
+                  <div class="price-item-extra">
+                    <span>1 Puppuccino offert pour votre chien + 1 Café au choix au Mana Café</span>
+                  </div>
+                </div>
+
+                <div class="price-item">
+                  <div class="price-item-main">
+                    <div class="price-item-info">
+                      <h4>Journée complète</h4>
+                      <span class="price-time">Journée complète (9h)</span>
+                    </div>
+                    <div class="price-tag-wrap">
+                      <span class="price-amount collab-price">45€</span>
+                    </div>
+                  </div>
+                  <div class="price-item-extra">
+                    <span>1 Puppuccino + Repas &amp; pauses détentes + 1 Café/boisson pour l'humain</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="collab-capsule-cta">
+                <a href="#contact" class="btn btn-collab-contact">contact us</a>
+              </div>
+            </div>
           </div>
 
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Balade collective</div>
-            <div class="price-block" data-label="Tarifs">18€</div>
-            <div class="addon" data-label="Si 2e chien">25€<small>(+7€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 18h</div>
-          </div>
-
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Balade solo</div>
-            <div class="price-block" data-label="Tarifs">25€</div>
-            <div class="addon" data-label="Si 2e chien">35€<small>(+10€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 18h</div>
-          </div>
-
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Garderie : Une demi-journée, 4h</div>
-            <div class="price-block" data-label="Tarifs">25€</div>
-            <div class="addon" data-label="Si 2e chien">35€<small>(+10€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 13h<br>14h - 18h</div>
-          </div>
-
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Garderie : Une journée complète, 9h</div>
-            <div class="price-block" data-label="Tarifs">35€<small>(minimum 2 balades)</small></div>
-            <div class="addon" data-label="Si 2e chien">49€<small>(+14€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 18h</div>
-          </div>
-
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Pensions : Une nuit</div>
-            <div class="price-block" data-label="Tarifs">22€</div>
-            <div class="addon" data-label="Si 2e chien">30€<small>(+8€)</small></div>
-            <div class="hours" data-label="Horaires">19h - 8h</div>
-          </div>
-
-          <div class="pricing-row pricing-grid">
-            <div class="service-name">Pensions : Une journée + 1 nuit</div>
-            <div class="price-block" data-label="Tarifs">50€<small>(+ 40€ par nuit supplémentaire)</small></div>
-            <div class="addon" data-label="Si 2e chien">70€<small>(+30€)</small></div>
-            <div class="hours" data-label="Horaires">9h - 8h</div>
+          <!-- Categorie 2: Pensions & Nuits (Sur Devis) -->
+          <div class="pricing-category-card pension-card">
+            <div class="category-header">
+              <span class="category-badge pension-badge">Pensions &amp; Nuits</span>
+              <h3>Pensions &amp; Nuits</h3>
+              <p>Une prise en charge nocturne ou sur plusieurs jours en toute sérénité.</p>
+            </div>
+            <div class="price-items-list">
+              <div class="price-item">
+                <div class="price-item-main">
+                  <div class="price-item-info">
+                    <h4>Garde nocturne &amp; séjour</h4>
+                    <span class="price-time">Une nuit ou plusieurs jours</span>
+                  </div>
+                  <div class="price-tag-wrap">
+                    <span class="price-amount price-devis-tag">Sur devis</span>
+                  </div>
+                </div>
+                <div class="price-item-extra">
+                  <span>Tarif sur-mesure établi selon la durée, le lieu et les besoins spécifiques de votre
+                    animal.</span>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: auto; padding-top: 24px;">
+              <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Demander un devis</a>
+            </div>
           </div>
         </div>
 
         <div class="extra-info">
-          <p class="extra-info-title">À savoir</p>
+          <p class="extra-info-title">💡 À savoir pour vos réservations</p>
           <ul>
-            <li>Les balades font minimum 1h.</li>
+            <li>Les balades font minimum 1 heure.</li>
             <li>Tarifs sur devis à partir de 2 jours consécutifs.</li>
             <li>Disponibilités du lundi au vendredi, 8h–12h et 14h–18h.</li>
-            <li>Supplément de +10€ le week-end, les jours fériés.</li>
-            <li>Les demandes qui ne figurent pas sur site et/ou en dehors des horaires standard sont prises en compte sur devis.</li>
+            <li>Supplément de +10€ le week-end et les jours fériés.</li>
+            <li>Les demandes particulières en dehors des horaires standard sont réalisées sur devis.</li>
           </ul>
         </div>
       </div>
@@ -216,13 +273,16 @@
     <section id="apropos" class="section-padded bg-soft">
       <div class="wrap about-grid">
         <div class="about-image">
-          <img src="assets/images/portrait-dogsitter.webp" alt="Portrait de la dog-sitter Bal'ad" width="900" height="900" loading="lazy">
+          <img src="assets/images/portrait-dogsitter.webp" alt="Portrait de la dog-sitter Bal'ad" width="900"
+            height="900" loading="lazy">
         </div>
         <div class="about-content">
           <span class="eyebrow">Mon approche</span>
           <h2>La passion du bien-être canin</h2>
-          <p>Titulaire de l'ACACED et propriétaire de deux chiens, j'accorde une importance capitale aux signaux d'apaisement, au respect des limites de chaque animal et à la sécurité.</p>
-          <p>Le vélo cargo permet d'éviter le stress des trajets en voiture fermée et d'offrir des balades enrichissantes dans les plus beaux espaces verts de Grenoble.</p>
+          <p>Titulaire de l'ACACED et propriétaire de deux chiens, j'accorde une importance capitale aux signaux
+            d'apaisement, au respect des limites de chaque animal et à la sécurité.</p>
+          <p>Le vélo cargo permet d'éviter le stress des trajets en voiture fermée et d'offrir des balades
+            enrichissantes dans les plus beaux espaces verts de Grenoble.</p>
 
           <ul class="feature-list">
             <li>
@@ -246,44 +306,34 @@
     <section id="zone" class="section-padded">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Zone couverte</span>
-          <h2>Grenoble et ses environs</h2>
-          <p>Prise en charge directement à votre domicile, à vélo cargo. En dehors de ce secteur, un devis est possible. Survolez ou cliquez sur un secteur pour voir le détail.</p>
+          <span class="eyebrow">Zone d'intervention</span>
+          <h2>Grenoble &amp; ses environs proches</h2>
+          <p>Une zone couverte unique à vélo cargo, avec un point de rendez-vous privilégié au <strong>Mana
+              Café</strong> pour déposer et récupérer vos chiens.</p>
         </div>
 
         <div class="zone-grid">
           <ul class="zone-list">
             <li>
-              <button type="button" class="zone-item" data-zone="centre">
+              <button type="button" class="zone-item is-active" data-zone="mana">
                 <span class="zone-dot zone-dot-centre" aria-hidden="true"></span>
-                <span class="zone-name">Grenoble centre</span>
-                <span class="zone-tag">Domicile</span>
+                <span class="zone-name">Point de RDV : Mana Café</span>
+                <span class="zone-tag">📍 Dépôt &amp; Récupération</span>
               </button>
+              <div class="zone-desc-text">21 Rue Saint-Jacques, 38000 Grenoble</div>
             </li>
             <li>
-              <button type="button" class="zone-item" data-zone="smh">
+              <button type="button" class="zone-item" data-zone="grenoble">
                 <span class="zone-dot zone-dot-smh" aria-hidden="true"></span>
-                <span class="zone-name">Saint-Martin-d'Hères</span>
-                <span class="zone-tag">Domicile</span>
+                <span class="zone-name">Grenoble &amp; environs proches</span>
+                <span class="zone-tag">🚴 Domicile</span>
               </button>
-            </li>
-            <li>
-              <button type="button" class="zone-item" data-zone="echirolles">
-                <span class="zone-dot zone-dot-echirolles" aria-hidden="true"></span>
-                <span class="zone-name">Échirolles</span>
-                <span class="zone-tag">Domicile</span>
-              </button>
-            </li>
-            <li>
-              <button type="button" class="zone-item" data-zone="autres">
-                <span class="zone-dot zone-dot-autres" aria-hidden="true"></span>
-                <span class="zone-name">Autres secteurs</span>
-                <span class="zone-tag zone-tag-devis">Sur devis</span>
-              </button>
+              <div class="zone-desc-text">Prise en charge à domicile et sorties nature adaptées</div>
             </li>
           </ul>
           <div class="zone-map">
-            <div id="zoneMap" class="zone-map-canvas" role="img" aria-label="Carte des secteurs desservis par Bal'ad autour de Grenoble"></div>
+            <div id="zoneMap" class="zone-map-canvas" role="img"
+              aria-label="Carte de la zone couverte à Grenoble avec le point de RDV Mana Café"></div>
           </div>
         </div>
       </div>
@@ -299,15 +349,18 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Mon chien peut-il sauter du vélo cargo en route ?</summary>
-            <p>Non, la caisse du vélo cargo est équipée de points d'attache sécurisés avec mousquetons reliés au harnais de votre chien. Il voyage en toute sécurité.</p>
+            <p>Non, la caisse du vélo cargo est équipée de points d'attache sécurisés avec mousquetons reliés au harnais
+              de votre chien. Il voyage en toute sécurité.</p>
           </details>
           <details class="faq-item">
             <summary>Quels quartiers de Grenoble desservez-vous ?</summary>
-            <p>Je me déplace sur l'ensemble de Grenoble (Hyper-centre, Île Verte, Championnet, Berriat, Caserne de Bonne) ainsi que La Tronche et Saint-Martin-d'Hères.</p>
+            <p>Je me déplace sur l'ensemble de Grenoble (Hyper-centre, Île Verte, Championnet, Berriat, Caserne de
+              Bonne) ainsi que La Tronche et Saint-Martin-d'Hères.</p>
           </details>
           <details class="faq-item">
             <summary>Faites-vous une pré-visite avant la première garde ?</summary>
-            <p>Oui, une première rencontre est obligatoire pour faire connaissance avec vous et votre chien, valider ses ententes et signer le contrat.</p>
+            <p>Oui, une première rencontre est obligatoire pour faire connaissance avec vous et votre chien, valider ses
+              ententes et signer le contrat.</p>
           </details>
           <details class="faq-item">
             <summary>Puis-je annuler ou modifier ma réservation ?</summary>
@@ -323,7 +376,8 @@
           </details>
           <details class="faq-item">
             <summary>Y a-t-il des conditions pour accepter mon chien ?</summary>
-            <p>Pas de règle stricte a priori : âge, comportement, besoins médicaux... chaque situation est évaluée au cas par cas lors de la rencontre obligatoire, afin de proposer un accompagnement adapté.</p>
+            <p>Pas de règle stricte a priori : âge, comportement, besoins médicaux... chaque situation est évaluée au
+              cas par cas lors de la rencontre obligatoire, afin de proposer un accompagnement adapté.</p>
           </details>
         </div>
       </div>
@@ -335,7 +389,8 @@
         <div class="section-head light">
           <span class="eyebrow light">Contact</span>
           <h2>Prêt à offrir une belle sortie à votre chien ?</h2>
-          <p>Contactez-moi directement pour réserver une balade, une garde ou simplement échanger sur le bien-être de votre compagnon.</p>
+          <p>Contactez-moi directement pour réserver une balade, une garde ou simplement échanger sur le bien-être de
+            votre compagnon.</p>
         </div>
 
         <div class="contact-cards">
@@ -349,13 +404,14 @@
           </div>
           <div class="contact-card">
             <span class="contact-label">Mail</span>
-            <a href="mailto:balad.contact@gmail.com">balad.contact@gmail.com</a>
+            <a href="mailto:contact@balad-grenoble.fr">contact@balad-grenoble.fr</a>
           </div>
         </div>
 
         <div class="reservation-form-wrap">
           <h3>Faire une demande de réservation</h3>
-          <p class="reservation-intro">Envoyez votre demande directement par email, ou téléchargez-la en PDF pour me la transmettre autrement.</p>
+          <p class="reservation-intro">Envoyez votre demande directement par email, ou téléchargez-la en PDF pour me la
+            transmettre autrement.</p>
 
           <form id="reservationForm" class="reservation-form" novalidate>
             <div class="form-row">
@@ -385,12 +441,9 @@
                 <label for="service">Prestation souhaitée *</label>
                 <select id="service" name="prestation" required>
                   <option value="">Choisir...</option>
-                  <option>Balade collective</option>
-                  <option>Balade solo</option>
-                  <option>Garderie demi-journée (4h)</option>
-                  <option>Garderie journée complète (9h)</option>
-                  <option>Pension une nuit</option>
-                  <option>Pension journée + nuit</option>
+                  <option>Garderie Canine x Mana — Demi-journée avec Puppuccino &amp; Café (35€)</option>
+                  <option>Garderie Canine x Mana — Journée complète avec Puppuccino &amp; Café (45€)</option>
+                  <option>Pensions &amp; Nuits (Sur devis)</option>
                 </select>
               </div>
               <div class="form-field">
@@ -405,7 +458,8 @@
 
             <div class="form-field">
               <label for="message">Message complémentaire</label>
-              <textarea id="message" name="message" rows="4" placeholder="Infos utiles : race, taille, comportement, allergies..."></textarea>
+              <textarea id="message" name="message" rows="4"
+                placeholder="Infos utiles : race, taille, comportement, allergies..."></textarea>
             </div>
 
             <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Bal'ad">
@@ -431,11 +485,16 @@
         </div>
 
         <div class="photo-grid">
-          <img src="assets/images/photo-balade-1.webp" alt="Chien en pleine balade, harnais attaché en sécurité" width="750" height="1000" loading="lazy">
-          <img src="assets/images/photo-balade-2.webp" alt="Chien se reposant en extérieur dans un espace vert" width="640" height="428" loading="lazy">
-          <img src="assets/images/photo-balade-3.webp" alt="Chien installé dans la caisse sécurisée du vélo cargo" width="750" height="1000" loading="lazy">
-          <img src="assets/images/photo-balade-4.webp" alt="Chien explorant un sentier lors d'une sortie nature" width="760" height="1000" loading="lazy">
-          <img src="assets/images/photo-balade-5.webp" alt="Chien en balade dans les rues de Grenoble" width="724" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-1.webp" alt="Chien en pleine balade, harnais attaché en sécurité"
+            width="750" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-2.webp" alt="Chien se reposant en extérieur dans un espace vert"
+            width="640" height="428" loading="lazy">
+          <img src="assets/images/photo-balade-3.webp" alt="Chien installé dans la caisse sécurisée du vélo cargo"
+            width="750" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-4.webp" alt="Chien explorant un sentier lors d'une sortie nature"
+            width="760" height="1000" loading="lazy">
+          <img src="assets/images/photo-balade-5.webp" alt="Chien en balade dans les rues de Grenoble" width="724"
+            height="1000" loading="lazy">
         </div>
       </div>
     </section>
@@ -444,14 +503,17 @@
   <footer>
     <div class="wrap footer-content">
       <span class="logo">Bal<span class="dot">'</span>ad</span>
-      <p>© 2026 Bal'ad Dog-Sitting Grenoble — Tous droits réservés.</p>
+      <p>© 2026 Bal'ad Dog-Sitting Grenoble — Tous droits réservés. · <a href="mentions-legales.html"
+          style="color: inherit; text-decoration: underline;">Mentions Légales</a></p>
     </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
     integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin></script>
   <script src="script.js"></script>
 </body>
+
 </html>

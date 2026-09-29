@@ -1454,6 +1454,21 @@ footer {
   color: var(--pine-light);
 }
 
+.footer-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pension-cta {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 

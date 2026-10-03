@@ -127,7 +127,7 @@ header {
 
 .logo {
   font-family: 'Fraunces', serif;
-  font-size: 26px;
+  font-size: 38px;
   font-weight: 700;
   color: var(--pine);
   text-decoration: none;
@@ -136,15 +136,17 @@ header {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
 }
 
 .brand-logo-img {
-  height: 96px;
+  height: 116px;
   width: auto;
   object-fit: contain;
   display: block;
+  margin-top: -18px;
+  transform: scaleX(-1);
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -153,8 +155,8 @@ header {
 }
 
 .brand-logo span {
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
   line-height: 1;
 }
 
@@ -184,6 +186,38 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 6px 4px;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.menu-toggle:hover {
+  opacity: 0.65;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--pine);
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Animation croix quand menu ouvert */
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* Hero */
@@ -707,7 +741,7 @@ img.collab-logo-mana {
 }
 
 .collab-logo-left {
-  height: 68px;
+  height: 88px;
   width: auto;
   object-fit: contain;
 }
@@ -870,6 +904,17 @@ img.collab-logo-mana {
   line-height: 1.4;
 }
 
+.collab-header-top .textarea {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--pine-light);
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: 'Work Sans', sans-serif;
+}
+
 .price-items-list {
   display: flex;
   flex-direction: column;
@@ -970,10 +1015,10 @@ img.collab-logo-mana {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .pricing-categories {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 }
 
@@ -1141,7 +1186,7 @@ img.collab-logo-mana {
 
 .zone-dot-autres {
   background: transparent;
-  border: 2px dashed rgba(31, 36, 30, 0.4);
+  border: 2px dashed rgba(36, 30, 35, 0.4);
 }
 
 .zone-name {
@@ -1483,6 +1528,44 @@ footer {
   }
 
   .menu-toggle {
+    display: flex;
+  }
+
+  #navMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(246, 241, 230, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 24px 24px;
+    z-index: 99;
+  }
+
+  #navMenu.active {
     display: block;
+  }
+
+  #navMenu .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  #navMenu .nav-links li a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  #navMenu .nav-links li:last-child a {
+    border-bottom: none;
+    margin-top: 12px;
+    text-align: center;
   }
 }

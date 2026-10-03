@@ -7,6 +7,14 @@ if (toggleBtn && navMenu) {
     const isOpen = navMenu.classList.toggle('active');
     toggleBtn.setAttribute('aria-expanded', String(isOpen));
   });
+
+  // Fermer le menu quand on clique sur un lien
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 // Formulaire de réservation : envoi par email (FormSubmit) et export PDF (jsPDF)
